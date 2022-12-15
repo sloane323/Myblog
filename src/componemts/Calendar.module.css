@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+.mainwrap {
+    text-align: center;
+}
+.nametitle h2 {
+    font-size: 6em;
+    color:white;
+    -webkit-text-stroke: 2px pink;
+    font-family: 'Zen Dots', cursive;
+
+}
+
+@media (max-width: 800px) {
+
+    .nametitle h2 {
+        font-size: 3em;
+        color:white;
+        -webkit-text-stroke: 2px black;
+        font-family: 'Zen Dots', cursive;
+    
+    }
+    
+  }
