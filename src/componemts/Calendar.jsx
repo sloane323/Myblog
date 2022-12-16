@@ -18,16 +18,23 @@ const Clendar = () => {
             setInterval(()=>{setTime(new Date())}, 1000)
         },[]);
 
+        const week = ['일', '월', '화', '수', '목', '금', '토'];
+        let dayOfWeek = week[time.getDay()];
+
+        
+        const Month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Otc', 'Nov', 'Dec'];
+        let dayOfmonth = Month[time.getMonth()];
 
     return ( <div>
 
      <div className={styles.nametitle}> <h2> Minji Kim </h2> </div>  
-     <div>
-         {time.getMonth()} / {time.getDate()} / {time.getFullYear()} <br />
-        <p> 현재 시간 : {printTime()} </p>
-    </div>
 
-        <div>  {time.getFullYear()} </div>
+
+
+
+        <div>  {time.getFullYear()}  {dayOfmonth} {time.getDate()} 
+        <br /> {dayOfWeek} </div>
+        <div> <p> {printTime()}  </p>    </div>
         
     
    

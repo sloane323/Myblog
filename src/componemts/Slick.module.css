@@ -9,5 +9,27 @@ margin-bottom: 30px;
     text-align: center;
     position:relative;
     border-radius: 20%;
+    margin-bottom: 40px;
 }
 
+.slickbox_mo{
+    display: none;
+}
+
+@media (max-width: 800px) {
+
+        .slickbox {
+            display: none;
+        }
+   
+
+        .slickbox_mo{
+            display: inline-block;
+            width: 90%;
+            display: inline-block;
+            text-align: center;
+            position:relative;
+            border-radius: 20%;
+            margin-bottom: 40px;
+        }
+  }

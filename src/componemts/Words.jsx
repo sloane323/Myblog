@@ -74,12 +74,24 @@ const Words = () => {
     return words[randomnum];
   }, []);
 
+  const [imgList, setImgList] = useState([
+    "chrismasbg_1.jpg",
+    "chrismasbg_2.jpg",
+    "chrismasbg_3.jpg",
+    "chrismasbg_4.jpg",
+    "chrismasbg_5.jpg",
+    "chrismasbg_6.jpg",
+    "chrismasbg_7.jpg",
+    "chrismasbg_8.jpg",
+  ]);
 
   return (
     <div>
       {/** useMemo를 사용했을 경우, 그 함수의 return 값이 변수안에 들어가게 된다
        * 사용할때 변수 이름으로만 사용 해야한다.
        */}
+
+                  
       <div className={styles.textbox}>
         <div className={styles.words}>
           <p>{printWord.text}</p>
@@ -94,10 +106,10 @@ const Words = () => {
         </div>
 
       </div>
+      </div>
 
 
 
-    </div>
   );
 };
 

@@ -16,6 +16,18 @@ const Slick = () => {
     arrows: true,
     autoplay: true,
   };
+  
+
+  const settingsmo = {
+    dots: true,
+    adaptiveHeight: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+  };
 
   // 슬릭에 출력할 이미지 배열
   const [imgList, setImgList] = useState([
@@ -31,16 +43,13 @@ const Slick = () => {
 
   return (
     <div className={styles.slicktable}>
+
       <div className={styles.slickbox}>
         <h2> Merry Christmas </h2>
         {/** 슬라이더의 내용이 커지면 다음페이지로 넘어가기 때문에 이미지 사이즈 조절
          * 이미지를 바로 접근할수 없기에 require로 접근
          */}
         <Slider {...settings}>
-          {/* <div>
-            <div className={styles.imgbox}> <img style={{width:"100%"}} src={require(`../img/chrismasbg_1.jpg`)} /></div>
-          </div> */}
-
           {imgList.map((image) => (
             <div>
               <div  key="{item}"
@@ -56,6 +65,38 @@ const Slick = () => {
           ))}
         </Slider>
       </div>
+
+
+
+<div className={styles.slickbox_mo}>
+        <h2> Merry Christmas </h2>
+        {/** 슬라이더의 내용이 커지면 다음페이지로 넘어가기 때문에 이미지 사이즈 조절
+         * 이미지를 바로 접근할수 없기에 require로 접근
+         */}
+        <Slider {...settingsmo}>
+          {/* <div>
+            <div className={styles.imgbox}> <img style={{width:"100%"}} src={require(`../img/chrismasbg_1.jpg`)} /></div>
+          </div> */}
+
+          {imgList.map((image) => (
+            <div>
+              <div  key="{item}"
+                style={{
+                  width: "auto",
+                  height: "30vh",
+                  backgroundImage: "url(" + require("../img/" + image) + ")",
+                  backgroundSize: "cover",
+                  padding:"30px",
+                  boxShadow:"2px 2px 2px 2px black" }}
+                  key="{item}"
+              ></div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+
+
     </div>
   );
 };
